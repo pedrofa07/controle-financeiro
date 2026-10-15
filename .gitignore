@@ -1,7 +1,7 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-# dependencies
+# Dependências
 node_modules/
+api/node_modules/
 
 # Expo
 .expo/
@@ -9,7 +9,14 @@ dist/
 web-build/
 expo-env.d.ts
 
-# Native
+# Arquivos locais e credenciais
+.env
+.env.*
+!.env.example
+api/.env
+api/.env.*
+
+# Plataformas nativas
 .kotlin/
 *.orig.*
 *.jks
@@ -17,25 +24,18 @@ expo-env.d.ts
 *.p12
 *.key
 *.mobileprovision
+/ios
+/android
 
-# Metro
+# Cache e logs
 .metro-health-check*
-
-# debug
 npm-debug.*
 yarn-debug.*
 yarn-error.*
 
-# macOS
+# Sistema operacional
 .DS_Store
-*.pem
+Thumbs.db
 
-# local env files
-.env*.local
-
-# typescript
+# TypeScript
 *.tsbuildinfo
-
-# generated native folders
-/ios
-/android
